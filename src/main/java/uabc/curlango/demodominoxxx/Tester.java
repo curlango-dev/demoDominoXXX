@@ -18,6 +18,6 @@ public class Tester
         jugador = new Jugador("Cecy");
         ArrayList<Ficha> unas = fichas.entregarFichas(5);
         jugador.tomarFichas(unas);
-        System.out.println(jugador.getFichas());
+        System.out.println(jugador.getFichasAsString());
     }
 }

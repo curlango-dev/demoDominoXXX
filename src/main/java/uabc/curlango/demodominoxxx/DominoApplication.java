@@ -125,6 +125,20 @@ public class DominoApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        JuegoDomino juegoDomino = new JuegoDomino();
+        juegoDomino.agregarJugador("Cecy");
+        juegoDomino.agregarJugador("María");
+        juegoDomino.agregarJugador("Juan");
+        juegoDomino.agregarJugador("Merlina");
+
+        juegoDomino.repartirFichas();
+        ArrayList<Jugador> jugadores = juegoDomino.getJugadores();
+        for (Jugador jugador : jugadores) {
+            System.out.println(jugador);
+        }
+        juegoDomino.determinarPrimerJugador();
+        Jugador jugadorActual = juegoDomino.getJugadorActual();
+        System.out.println("El primero será " + jugadorActual);
+        // launch();
     }
 }
